@@ -50,6 +50,15 @@ class ad4080(rx, context_manager):
         """sampling_frequency: Sampling frequency value"""
         return self._get_iio_dev_attr("sampling_frequency")
 
+    @property
+    def select_sampling_frequency(self):
+        """select sampling_frequency: Select Sampling frequency value"""
+        return self._get_iio_dev_attr("select_sampling_frequency")
+
+    @property
+    def select_sampling_frequency_available(self):
+        """select sampling_frequency available: Available Select Sampling frequency values"""
+        return self._get_iio_dev_attr("select_sampling_frequency_available")
 
     @property
     def sinc_dec_rate_available(self):
